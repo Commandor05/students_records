@@ -1,0 +1,45 @@
+.stuff {
+    height: 50px;
+}
+
+h1 + .glyphicon-user {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 20pt;
+    text-align: right;
+
+}
+
+.transparent {
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    background-color: #767676;
+    color: #fff;
+}
+
+p a {
+    font-size: 1.2em;
+}
+
+p {
+    text-align: center;
+}
+
+td a:hover {
+    text-decoration: none;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    background-color: #767676;
+    color: #fff;
+}
