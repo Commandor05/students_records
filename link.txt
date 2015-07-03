@@ -1,0 +1,1 @@
+http://www.php-fig.org/psr/psr-4/ru/examples/

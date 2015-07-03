@@ -1,12 +1,17 @@
 <?php
+include('Loader.php');
+
+$loader = Loader::getInstance();
+$loader->addNamespacePath( '\\', __DIR__ . 'application/controllers' );
+$loader->register();
 /**
  * Default paths for files search
  */
-set_include_path(get_include_path()
-    . PATH_SEPARATOR . 'application/controllers'
-    . PATH_SEPARATOR . 'application/models'
-    . PATH_SEPARATOR . 'application/views'
-    . PATH_SEPARATOR . 'application/views/layouts');
+//set_include_path(get_include_path()
+//    . PATH_SEPARATOR . 'application/controllers'
+//    . PATH_SEPARATOR . 'application/models'
+//    . PATH_SEPARATOR . 'application/views'
+//    . PATH_SEPARATOR . 'application/views/layouts');
 
 /* Files names for: views */
 define('STUD_DEFAULT_FILE', 'student_default.php');
@@ -26,14 +31,16 @@ define('BOOTSTRAP_DIR', $_SERVER["DOCUMENT_ROOT"] . '/application/views/layouts/
  * Classes autoloader
  * @param string $class -class name
  */
-function __autoload($class)
-{
-    require_once($class . '.php');
-}
+//function __autoload($class)
+//{
+//    require_once($class . '.php');
+//}
 
 /* Initialise and start FrontController */
 $front = FrontController::getInstance();
 $front->route();
 
 /* Data output */
+
+echo __DIR__;
 echo $front->getBody();
